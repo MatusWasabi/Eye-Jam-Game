@@ -8,6 +8,7 @@ public class HitZone : MonoBehaviour
     
     public InputAction button1;
     private MovingKey _key;
+    private string buttonPress;
 
     private void OnEnable()
     {
@@ -23,14 +24,10 @@ public class HitZone : MonoBehaviour
 
     private void OnButton1(InputAction.CallbackContext context)
     {
-        Debug.Log("Button 1 is pressed");
         if (_key)
         {
-            Destroy(_key.gameObject);
-        }
-        else
-        {
-            Debug.Log("Minus point");
+            Debug.Log(button1.GetBindingDisplayString());
+            _key.DestroyByPlayer(button1.GetBindingDisplayString());
         }
     }
 

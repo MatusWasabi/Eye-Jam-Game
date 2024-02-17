@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class MovingKey : MonoBehaviour
 {
@@ -11,11 +13,18 @@ public class MovingKey : MonoBehaviour
     private static int _score = 5;
     private Vector2 targetLocation ;
 
+    
+    private float _timer = 3.0f;
+    [SerializeField]
+    private ScoreCounter _scoreCounter;
 
+    [SerializeField] private string keyToPressed;
+    [SerializeField] private TextMeshProUGUI _textDisplay;
 
     private void Awake()
     {
         targetLocation = Target.transform.position;
+        _textDisplay.text = keyToPressed.ToString();
     }
 
     private void FixedUpdate()
@@ -25,23 +34,42 @@ public class MovingKey : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, targetLocation, _speed);
         }
-
+        
+        // Too specific condition
         if (transform.position.x.Equals(targetLocation.x) && transform.position.y.Equals(targetLocation.y))
         {
             _isMoving = false;
+            _timer -= Time.deltaTime;
+        }
+
+        if (_timer <= 0)
+        {
+            DestroyByGame();
         }
     }
 
-    public void DestroyByPlayer()
+    public void DestroyByPlayer(string playerInput)
     {
-        Debug.Log($"+{_score} score");
+        if (playerInput.Equals(keyToPressed))
+        {
+            Debug.Log($"+{_score} score");
+            _scoreCounter.Score += _score;
+            Destroy(gameObject);
+        }
+        else
+        {
+            DestroyByGame();
+        }
+        
+        
     }
 
-    private void DestroyByTime()
+    private void DestroyByGame()
     {
         Debug.Log($"-{_score} score");
+        _scoreCounter.Score -= _score;
+        Destroy(gameObject);
+        
     }
-    
-    
     
 }
