@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class MovingKey : MonoBehaviour
@@ -26,6 +27,7 @@ public class MovingKey : MonoBehaviour
         targetLocation = Target.transform.position;
         _textDisplay.text = keyToPressed.ToString();
     }
+    
 
     private void FixedUpdate()
     {
@@ -71,5 +73,6 @@ public class MovingKey : MonoBehaviour
         Destroy(gameObject);
         
     }
+    
     
 }

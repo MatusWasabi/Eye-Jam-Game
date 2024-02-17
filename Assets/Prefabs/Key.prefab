@@ -274,6 +274,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
   _speed: 5
+  _scoreCounter: {fileID: 0}
+  keyToPressed: Press A
+  _textDisplay: {fileID: 8632756035735557713}
 --- !u!61 &3077818381214345648
 BoxCollider2D:
   m_ObjectHideFlags: 0

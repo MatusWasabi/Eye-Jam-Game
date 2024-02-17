@@ -1,5 +1,6 @@
 
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -31,6 +32,7 @@ public class HitZone : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         _key = other.GetComponent<MovingKey>();
+        
     }
 
     private void OnButton1(InputAction.CallbackContext context)
