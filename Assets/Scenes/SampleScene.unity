@@ -1122,11 +1122,62 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: b0564251-3c50-47b3-9df4-dccf91cca3f6
-      m_Path: <Keyboard>/#(A)
+      m_Path: <Keyboard>/a
       m_Interactions: Press
       m_Processors: 
       m_Groups: 
       m_Action: Button 1
+      m_Flags: 0
+    m_Flags: 0
+  button2:
+    m_Name: Button 2
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a4cf905c-826b-45fb-8f4d-2ac489cae369
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: b0300e23-da83-49e7-924f-b77482dc2229
+      m_Path: <Keyboard>/w
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Button 2
+      m_Flags: 0
+    m_Flags: 0
+  button3:
+    m_Name: Button 3
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 58e07fcb-401e-4a61-b071-526df26db217
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: ba7bf64b-7dfb-428a-9c09-e86545e88fd5
+      m_Path: <Keyboard>/s
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Button 3
+      m_Flags: 0
+    m_Flags: 0
+  button4:
+    m_Name: Button 4
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e645f69b-c618-41f2-9fbc-a810feed4435
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 1229af22-c852-4b9d-b1f3-94496e1cabf9
+      m_Path: <Keyboard>/d
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Button 4
       m_Flags: 0
     m_Flags: 0
 --- !u!61 &1439611512

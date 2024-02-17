@@ -44,7 +44,7 @@ public class MovingKey : MonoBehaviour
 
         if (_timer <= 0)
         {
-            DestroyByGame();
+            FailAnswer();
         }
     }
 
@@ -58,13 +58,13 @@ public class MovingKey : MonoBehaviour
         }
         else
         {
-            DestroyByGame();
+            FailAnswer();
         }
         
         
     }
 
-    private void DestroyByGame()
+    private void FailAnswer()
     {
         Debug.Log($"-{_score} score");
         _scoreCounter.Score -= _score;
