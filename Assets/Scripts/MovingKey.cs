@@ -70,7 +70,6 @@ public class MovingKey : MonoBehaviour
     {
         _scoreCounter.Score -= _score;
         Destroy(gameObject);
-        
     }
     
     
