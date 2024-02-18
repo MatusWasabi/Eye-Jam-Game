@@ -275,7 +275,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   _speed: 5
   _scoreCounter: {fileID: 0}
-  keyToPressed: Press A
+  keyToPressed: Press X
   _textDisplay: {fileID: 8632756035735557713}
 --- !u!61 &3077818381214345648
 BoxCollider2D:

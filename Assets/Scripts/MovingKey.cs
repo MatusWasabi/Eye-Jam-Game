@@ -13,6 +13,7 @@ public class MovingKey : MonoBehaviour
     public float _speed = 3.0f;
     private static int _score = 5;
     private Vector2 targetLocation ;
+    
 
     
     private float _timer = 3.0f;
@@ -54,7 +55,6 @@ public class MovingKey : MonoBehaviour
     {
         if (playerInput.Equals(keyToPressed))
         {
-            Debug.Log($"+{_score} score");
             _scoreCounter.Score += _score;
             Destroy(gameObject);
         }
@@ -68,7 +68,6 @@ public class MovingKey : MonoBehaviour
 
     private void FailAnswer()
     {
-        Debug.Log($"-{_score} score");
         _scoreCounter.Score -= _score;
         Destroy(gameObject);
         

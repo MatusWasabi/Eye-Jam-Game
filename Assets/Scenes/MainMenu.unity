@@ -1067,7 +1067,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -240}
-  m_SizeDelta: {x: 130.9179, y: 49.1575}
+  m_SizeDelta: {x: 681.72, y: 49.1575}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &892424930
 MonoBehaviour:
@@ -1089,7 +1089,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Volume
+  m_text: Volume (Adjust to where you can hear it)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1537,7 +1537,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SampleScene
+          m_StringArgument: Warning
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1392146562
@@ -1728,7 +1728,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 14b52eac66aa529408d8aa57acb78195, type: 2}
   m_audioClip: {fileID: 8300000, guid: d446ef8d3bd629b469c227fb47a7f8af, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
