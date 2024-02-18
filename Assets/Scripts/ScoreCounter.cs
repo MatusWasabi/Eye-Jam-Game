@@ -16,7 +16,11 @@ public class ScoreCounter : MonoBehaviour
         get { return _score; }
         set
         {
-            _score = value; 
+            _score = value;
+            if (_score < 0)
+            {
+                _score = 0;
+            }
             UpdateScore();
         }
     }

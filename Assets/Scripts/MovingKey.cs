@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.Serialization;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class MovingKey : MonoBehaviour
@@ -17,8 +18,8 @@ public class MovingKey : MonoBehaviour
 
     
     private float _timer = 3.0f;
-    [SerializeField]
-    private ScoreCounter _scoreCounter;
+
+    [FormerlySerializedAs("_scoreCounter")] public ScoreCounter ScoreCounter;
 
     [SerializeField] private string keyToPressed;
     [SerializeField] private TextMeshProUGUI _textDisplay;
@@ -55,7 +56,7 @@ public class MovingKey : MonoBehaviour
     {
         if (playerInput.Equals(keyToPressed))
         {
-            _scoreCounter.Score += _score;
+            ScoreCounter.Score += _score;
             Destroy(gameObject);
         }
         else
@@ -68,7 +69,7 @@ public class MovingKey : MonoBehaviour
 
     private void FailAnswer()
     {
-        _scoreCounter.Score -= _score;
+        ScoreCounter.Score -= _score;
         Destroy(gameObject);
     }
     
