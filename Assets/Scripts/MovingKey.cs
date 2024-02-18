@@ -39,17 +39,6 @@ public class MovingKey : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, targetLocation, _speed);
         }
         
-        // Too specific condition
-        if (transform.position.x.Equals(targetLocation.x) && transform.position.y.Equals(targetLocation.y))
-        {
-            _isMoving = false;
-            _timer -= Time.deltaTime;
-        }
-
-        if (_timer <= 0)
-        {
-            FailAnswer();
-        }
     }
 
     public void DestroyByPlayer(string playerInput)
@@ -67,7 +56,7 @@ public class MovingKey : MonoBehaviour
         
     }
 
-    private void FailAnswer()
+    public void FailAnswer()
     {
         ScoreCounter.Score -= _score;
         Destroy(gameObject);
