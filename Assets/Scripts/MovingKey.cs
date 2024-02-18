@@ -14,10 +14,12 @@ public class MovingKey : MonoBehaviour
     public float _speed = 3.0f;
     private static int _score = 5;
     private Vector2 targetLocation ;
-    
 
+    [SerializeField] private AudioClip correctAudio;
+    [SerializeField] private AudioClip failAudio;
+
+    [SerializeField] private AudioSource _audioSource;
     
-    private float _timer = 3.0f;
 
     [FormerlySerializedAs("_scoreCounter")] public ScoreCounter ScoreCounter;
 
@@ -46,6 +48,7 @@ public class MovingKey : MonoBehaviour
         if (playerInput.Equals(keyToPressed))
         {
             ScoreCounter.Score += _score;
+            _audioSource.PlayOneShot(correctAudio);
             Destroy(gameObject);
         }
         else
@@ -59,6 +62,7 @@ public class MovingKey : MonoBehaviour
     public void FailAnswer()
     {
         ScoreCounter.Score -= _score;
+        _audioSource.PlayOneShot(failAudio);
         Destroy(gameObject);
     }
     

@@ -274,7 +274,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
   _speed: 5
-  _scoreCounter: {fileID: 0}
+  correctAudio: {fileID: 8300000, guid: cebcd9e6fedb66c478c04b9ede9a4692, type: 3}
+  failAudio: {fileID: 8300000, guid: 347fa109852b87343aa7de6e2d2d3e86, type: 3}
+  _audioSource: {fileID: 0}
+  ScoreCounter: {fileID: 0}
   keyToPressed: Press X
   _textDisplay: {fileID: 8632756035735557713}
 --- !u!61 &3077818381214345648
